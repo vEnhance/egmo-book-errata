@@ -22,3 +22,16 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+  spellcheck:
+    runs-on: ubuntu-latest
+    name: "Spellcheck"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade codespell
+      - name: Run spellcheck
+        run: |
+          codespell $(git ls-files)

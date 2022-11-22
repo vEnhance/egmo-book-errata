@@ -1,0 +1,11 @@
+geombook-errata-*.asy
+geombook-errata-*.pdf
+geombook-errata.aux
+geombook-errata.fdb_latexmk
+geombook-errata.fls
+geombook-errata.log
+geombook-errata.out
+geombook-errata.pdf
+geombook-errata.pre
+geombook-errata.synctex.gz
+old-errata/

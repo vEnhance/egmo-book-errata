@@ -4,6 +4,9 @@
 ![Forks](https://img.shields.io/github/forks/vEnhance/napkin)
 ![Stars](https://img.shields.io/github/stars/vEnhance/napkin)
 
+[<img src="https://github.com/vEnhance/egmo-book-errata/actions/workflows/compile.yml/badge.svg" alt="EGMO errata status">](https://github.com/vEnhance/otis-web/actions)
+[<img src="https://github.com/vEnhance/egmo-book-errata/actions/workflows/spellcheck.yml/badge.svg" alt="EGMO errata status">](https://github.com/vEnhance/otis-web/actions)
+
 This book lists all the errata for my textbook
 [Euclidean Geometry in Math Olympiads](https://web.evanchen.cc/geombook.html).
 

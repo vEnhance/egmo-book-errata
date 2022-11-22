@@ -1,11 +1,14 @@
 \documentclass[11pt]{scrartcl}
+
 \newcommand{\crucial}[1]{\textbf{\sffamily\large\color{red} #1}}
-\providecommand{\ol}{\overline}
+
+\providecommand{\CC}{\mathbb C}
+\providecommand{\RR}{\mathbb R}
+\providecommand{\dang}{\measuredangle} %% Directed angle
+\providecommand{\dg}{^\circ}
 \providecommand{\half}{\frac{1}{2}}
 \providecommand{\inv}{^{-1}}
-\newcommand{\dang}{\measuredangle} %% Directed angle
-\providecommand{\dg}{^\circ}
-
+\providecommand{\ol}{\overline}
 %%% Load packages
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
@@ -148,7 +151,11 @@ I currently do not have any plans to create a second edition.
 \item[p.\  68] just before Problem 4.38, change ``show'' to ``shown''.
 \item[p.\  71] Problem 4.53 is missing a trailing period.
 \item[p.\  76] \crucial{Theorem 5.1 is missing a factor of $\frac12$.}
-\item[p.\  76] The shoelace formula is antisymmetric, not symmetric.
+\item[p.\  76] The shoelace formula is \textbf{antisymmetric}, not symmetric.
+\item[p.\  89] to finish example 5.14, one should also verify that $\angle A = 60\dg$
+  and $\angle A = 90\dg$ actually work.
+  As written, this is a proof that only $60\dg$ and $90\dg$ \emph{could} work,
+  and does not mention the converse direction.
 \item[p.\  92] \crucial{In Problem 5.23, when defining point $G$,
   line $HE$ should intersect $\Gamma_1$, not $\Gamma_2$.}
   Also, ``interest'' should be ``intersect'' in the first line.
@@ -247,6 +254,8 @@ I currently do not have any plans to create a second edition.
   from the four lines concurrent at $P$.
 \item[p.\  171] ``if one of the angles'' would be clearer as ``if any of the
   angles'', when defining the sign of $(a,b;x,y)$.
+\item[p.\  172] in the paragraph before Figure 9.2C,
+  ``(and vice versa)'' is redundant, it is in the previous sentence already.
 \item[p.\  173] in Problem 9.3, the points should also be collinear.
 \item[p.\  173] in Problem 9.4, add $k \neq 0$.
 \item[p.\  174] display in proof of Lemma 9.9, change $(A,B;Q,P)$ to $(A,B;P,Q)$.
@@ -257,6 +266,8 @@ I currently do not have any plans to create a second edition.
 \item[p.\  177] in Lemma 9.18, change ``implies'' to ``imply''.
 \item[p.\  178] in the proof of Theorem 9.19, change $\angle CAY = \angle YBC$ to $\angle ACY = \angle YCB$.
 \item[p.\  179] top of page, first sentence, $\ell$ is allowed to pass through $O$.
+\item[p.\  179] 7th line of Section 9.3, in ``we present four configurations'',
+  change ``four'' to ``five''.
 \item[p.\  181] in Lemma 9.27, change ``pole'' to ``polar'' (two instances).
 \item[p.\  184] \crucial{in Theorem 9.33,
   uniqueness is not true for (b) or (c).
@@ -291,6 +302,9 @@ I currently do not have any plans to create a second edition.
   change to $\left\langle x_1+x_2, y_1+y_2 \right\rangle$.
 \item[p.\  218] the misspelled ``ofter'' should be ``often''
 \item[p.\  219] replace ``two vectors $v$ and $w$'' with ``two vectors $\vec v$ and $\vec w$''.
+\item[p.\  219] \crucial{the dot product is not associative};
+  that property does not even make sense for this operation,
+  since is an operation from $\RR^n \times \RR^n \to \RR$.
 \item[p.\  222] hint 60, the inequality should be strict.
 \item[p.\  223] hint 77, replace ``$\dang CMN = \dang BMN$''
   with ``$\dang CNM = \dang BNM$''.
@@ -332,9 +346,11 @@ I currently do not have any plans to create a second edition.
 \item[p.\  234] hint 506, the angles should be directed.
 \item[p.\  235] hint 544, change ``equivalent'' to ``equivalent to''.
 \item[p.\  235] hint 554, change the similarity to $\triangle AOD \sim \triangle CO_1D$.
+\item[p.\  235] \crucial{hint 556 is broken}. I have no memory of what I meant to write.
 \item[p.\  236] hint 571, replace $k$ with $AB$.
 \item[p.\  236] hint 594, ``midpoint'' should be ``median''.
 \item[p.\  237] hint 616, change the second ``$\omega$'' to ``circle with diameter $\ol{PQ}$''
+\item[p.\  237] hint 633, change $H$ to $M$.
 \item[p.\  238] hint 649 is wrong (see correction to Solution 6.45 below).
 \item[p.\  238] hint 653 is missing a period.
 \item[p.\  238] hint 666, change $\frac{XB}{XA}$ to $\frac{XA}{XB}$.

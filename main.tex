@@ -1,10 +1,76 @@
 \documentclass[11pt]{scrartcl}
-\usepackage{evan}
 \newcommand{\crucial}[1]{\textbf{\sffamily\large\color{red} #1}}
+\providecommand{\ol}{\overline}
+\providecommand{\half}{\frac{1}{2}}
+\providecommand{\inv}{^{-1}}
+\newcommand{\dang}{\measuredangle} %% Directed angle
+\providecommand{\dg}{^\circ}
+
+%%% Load packages
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[obeyFinal,textsize=scriptsize,shadow]{todonotes}
+\usepackage{mathtools}
+\usepackage{microtype}
+
+\usepackage{fontspec}
+% https://tex.stackexchange.com/a/572220/76888
+\directlua{luaotfload.add_fallback
+  ("evans_fallbacks",
+    {
+      "NotoColorEmoji:mode=harf;",
+      "Source Han Sans TW:style=Regular;",
+      "Noto Serif CJK SC:style=Regular;",
+    }
+  )}
+\setmainfont{lmroman10-regular}[
+  BoldFont=lmroman10-bold,
+  ItalicFont=lmroman10-italic,
+  BoldItalicFont=lmroman10-bolditalic,
+  SlantedFont=lmromanslant10-regular,
+  BoldSlantedFont=lmromanslant10-bold,
+  SmallCapsFont=lmromancaps10-regular,
+  RawFeature={fallback=evans_fallbacks}
+]
+\setsansfont{lmsans10-regular}[
+  BoldFont=lmsans10-bold,
+  ItalicFont=lmsans10-oblique,
+  BoldItalicFont=lmsans10-boldoblique,
+  RawFeature={fallback=evans_fallbacks}
+]
+
+%%% Colored sections
+\renewcommand*{\sectionformat}%
+  {\color{purple}\S\thesection\enskip}
+  \renewcommand*{\subsectionformat}%
+  {\color{purple}\S\thesubsection\enskip}
+  \renewcommand*{\subsubsectionformat}%
+  {\color{purple}\S\thesubsubsection\enskip}
+  \KOMAoptions{numbers=noenddot}
+
+%%% Title
+\addtokomafont{subtitle}{\Large}
+\setkomafont{author}{\Large\scshape}
+\setkomafont{date}{\Large\normalsize}
+
+%%% Page setup
+\usepackage[headsepline]{scrlayer-scrpage}
+\renewcommand{\headfont}{}
+\addtolength{\textheight}{3.14cm}
+\setlength{\footskip}{0.5in}
+\setlength{\headsep}{10pt}
+\ihead{\footnotesize\textbf{\@author} (\@date)}
+\automark{section}
+\chead{}
+\ohead{\footnotesize\textbf{\@title}}
+\cfoot{\pagemark}
 
 \begin{document}
 \title{Errata for E.G.M.O.}
 \subtitle{\url{https://web.evanchen.cc/geombook.html}}
+\author{Evan Chen《陳誼廷》}
 \date{Last updated \today}
 \maketitle
 
@@ -307,36 +373,7 @@ I currently do not have any plans to create a second edition.
   we claim that the common point is $K = \left( a^2-b^2+c^2 : b^2-a^2+c^2 : -c^2 \right)$.
   Let $C_1 = (u:v:0)$, with $u+v=1$.
   \begin{center}
-  \begin{asy}
-  size(8cm);
-
-  /* Initialize Objects */
-  pair A = (-3.0, -1.0);
-  pair B = (0.0, -1.0);
-  pair C = (-2.0105, 0.7088);
-  pair C_1 = (-1.9336, -1.0);
-  pair B_1 = 2*(foot(circumcenter(C,B,C_1),C,A))-C;
-  pair A_1 = 2*(foot(circumcenter(C,A,C_1),C,B))-C;
-  pair C_2 = extension(A, A_1, B, B_1);
-
-  /* Draw objects */
-  draw(A--B--C--cycle, rgb(0.0,0.6,1.0));
-  draw(circumcircle(C,C_1,B), rgb(0.0,0.8,0.4));
-  draw(circumcircle(C,C_1,A), rgb(0.0,0.8,0.4));
-  draw(C_1--C_2, rgb(0.0,0.6,0.6));
-  draw(A--A_1, rgb(0.0,0.6,0.6));
-  draw(B--B_1, rgb(0.0,0.6,0.6));
-  draw(A_1--C_1--B_1);
-
-  /* Label points */
-  dot("$A$", A, dir(222));
-  dot("$B$", B, dir(-42));
-  dot("$C$", C, dir(100));
-  dot("$C_1$", C_1, dir(-95)*2);
-  dot("$A_1$", A_1, dir(30));
-  dot("$B_1$", B_1, dir(170));
-  dot("$C_2$", C_2, dir(105));
-  \end{asy}
+    \includegraphics{sharygin-figure.pdf}
   \end{center}
 
   By power of a point, we observe that $BA_1 = \frac{uc^2}{a}$.

@@ -6,11 +6,17 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
+      - name: Clone googlefonts/noto-cjk
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: "googlefonts"
+          repository: "noto-cjk"
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
           latexmk_use_lualatex: true
+          extra_fonts: "noto-cjk/**.otf"
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:

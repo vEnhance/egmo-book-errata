@@ -1,8 +1,8 @@
 # Errata for "Euclidean Geometry in Math Olympiads"
 
 ![Last commit](https://img.shields.io/github/last-commit/vEnhance/napkin)
-[<img src="https://github.com/vEnhance/egmo-book-errata/actions/workflows/compile.yml/badge.svg" alt="EGMO errata status">](https://github.com/vEnhance/otis-web/actions)
-[<img src="https://github.com/vEnhance/egmo-book-errata/actions/workflows/spellcheck.yml/badge.svg" alt="EGMO errata status">](https://github.com/vEnhance/otis-web/actions)
+[<img src="https://github.com/vEnhance/egmo-book-errata/actions/workflows/compile.yml/badge.svg" alt="EGMO errata status">](https://github.com/vEnhance/egmo-book-errta/actions)
+[<img src="https://github.com/vEnhance/egmo-book-errata/actions/workflows/spellcheck.yml/badge.svg" alt="EGMO errata status">](https://github.com/vEnhance/egmo-book-errata/actions)
 
 This book lists all the errata for my textbook
 [Euclidean Geometry in Math Olympiads](https://web.evanchen.cc/geombook.html).

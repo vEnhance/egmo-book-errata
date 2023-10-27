@@ -7,6 +7,12 @@
 This book lists all the errata for my textbook
 [Euclidean Geometry in Math Olympiads](https://web.evanchen.cc/geombook.html).
 
+## PDF Download
+
+You can [download the compiled PDF from web.evanchen.cc][pdf].
+
+[pdf]: https://web.evanchen.cc/upload/geombook-errata.pdf
+
 ## Submitting more errata
 
 If you find more errata, you can have it added to this list by

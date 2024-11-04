@@ -10,7 +10,7 @@ This book lists all the errata for my textbook
 
 You can [download the compiled PDF from web.evanchen.cc][pdf].
 
-[pdf]: https://web.evanchen.cc/upload/geombook-errata.pdf
+[pdf]: https://web.evanchen.cc/textbooks/geombook-errata.pdf
 
 ## Submitting more errata
 
